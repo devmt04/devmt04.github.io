@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lekton:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lekton:wght@400;700&family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+:root{
+	--background : #1D1A21;
+	--code-keyword : #6D00FF;
+	--code-keyword-2 : #E42323;
+	--code-identifier : #CCFF00;
+	--code-identifier-2 : #00FFD1;
+	--code-int : #FFD600;
+	--code-string : #05FF00;
+	--code-comment : #616062;
+
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: var(--background);
+	color: white;
+}
+
+p{
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+#start{
+	height: 100vh;
+	width:100vw;
+}
+
+#start-backdrop{
+	background: url("static/pexels-jakub-novacek-924824.jpg");
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#start-intro{
+	display: flex;
+	flex-direction: column;
+	font-family: "League Spartan", sans-serif;
+}
+
+#about, #work, #contact, #gallery{
+	padding: 80px;
+}
+
+
+#about-text{
+	margin-top: 50px;
+	display: flex;
+}
+
+#about-text-linenumber{
+	padding: 10px;
+}
+
+#about-text-linenumber span{
+	display: block;
+	text-align: right;
+	font-family: "Lekton", sans-serif;
+	color : #7D7D7D;
+	padding: 1px;
+}
+
+#about-text-code{
+	border-left: 3px solid #7122DA;
+	padding: 10px;
+	margin-left: 5px;
+}
+
+
+
+#about-text-code span:hover{
+	background-color: #160D23;
+}
+
+.about-text-code-line{
+	display: block;
+	font-family: "Lekton", sans-serif;
+	padding: 1px;
+	padding-left: 10px;
+}
+
+.line-indent-1{
+	padding-left: 40px!important;
+}
+
+.line-indent-2{
+	padding-left: 80px!important;
+}
+
+.line-indent-3{
+	padding-left: 120px!important;
+}
+
+.work-items{
+	background-color: #241D2E;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
+	gap:20px;
+	font-family: "Lexend", sans-serif;
+	font-weight: 500;
+}
+
+.work-items img{
+	width: 100%;
+	height: 100%;
+}
+
+.contact-items{
+	display: flex;
+	padding:20px;
+	align-items: center;
+	justify-content: center;
+	gap:10px;
+	font-family: "Aldrich", sans-serif;
+	color: #C498FF;
+	background-color: #241D2E;
+}
+
+.contact-items:hover{
+	background-color: #1D1527;
+}
+
+
+.gallery-items{
+
+}
+
+.gallery-items img{
+	width: 100%;
+}
+
+.gallery-img-desc{
+
+}
+
+.gallery-items-back{
+
+}
