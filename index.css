@@ -164,7 +164,7 @@ a{
 	}
 
 	#start-intro-p1{
-		font-size: 3em!important;
+		font-size: 2em!important;
 	}
 
 	#start-intro-p2{
@@ -186,7 +186,7 @@ a{
 		padding-top: 100px;
 	}
 	#contact{
-		padding-top: 100px;
+		padding-top: 150px;
 		padding-left:20px;
 	}
 
@@ -227,11 +227,16 @@ a{
 		background-color:transparent;
 	}
 
+	#contact-p{
+		margin-top:15px!important;
+	}
+
 	#contact div:nth-child(2){
 		gap:15px!important;
 		flex-wrap: nowrap!important;
 		flex-direction: column;
 		align-items: flex-start;
+		margin-top:50px!important;
 	}
 }
 
