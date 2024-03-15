@@ -42,48 +42,48 @@ function defocuslinenumber(index){
 
 
 
-const targetSection = document.getElementById("about");
-const targetOffset = targetSection.offsetTop;
-const duration = 500;
+// const targetSection = document.getElementById("about");
+// const targetOffset = targetSection.offsetTop;
+// const duration = 500;
 
-document.getElementById("start").addEventListener('wheel', function(event){
-	let delta = event.deltaY;
- 	if(delta>0){
-        scrollToSection(targetOffset, duration);
- 	}
-});
-
-
-var startY;
-document.getElementById("start").addEventListener('touchstart', function(event) {
-	startY = event.touches[0].clientY;
-});
-document.getElementById("start").addEventListener('touchmove', function(event) {
-	let delta = event.touches[0].clientY;
- 	if(delta<startY){
-        scrollToSection(targetOffset, duration);
- 	}
-});
+// document.getElementById("start").addEventListener('wheel', function(event){
+// 	let delta = event.deltaY;
+//  	if(delta>0){
+//         scrollToSection(targetOffset, duration);
+//  	}
+// });
 
 
-function scrollToSection(targetOffset, duration) {
-	const startingY = window.pageYOffset;
-	const diff = targetOffset - startingY;
-	let start;
+// var startY;
+// document.getElementById("start").addEventListener('touchstart', function(event) {
+// 	startY = event.touches[0].clientY;
+// });
+// document.getElementById("start").addEventListener('touchmove', function(event) {
+// 	let delta = event.touches[0].clientY;
+//  	if(delta<startY){
+//         scrollToSection(targetOffset, duration);
+//  	}
+// });
 
-	// Use requestAnimationFrame to create smooth animation
-	window.requestAnimationFrame(function step(timestamp) {
-	  if (!start) start = timestamp;
-	  const timeElapsed = timestamp - start;
-	  const percentage = Math.min(timeElapsed / duration, 1);
 
-	  // Calculate new scroll position using easing function
-	  window.scrollTo(0, startingY + diff * percentage);
+// function scrollToSection(targetOffset, duration) {
+// 	const startingY = window.pageYOffset;
+// 	const diff = targetOffset - startingY;
+// 	let start;
 
-	  // Continue scrolling until duration is reached
-	  if (timeElapsed < duration) {
-	    window.requestAnimationFrame(step);
-	  }
-	}
-);
-}
+// 	// Use requestAnimationFrame to create smooth animation
+// 	window.requestAnimationFrame(function step(timestamp) {
+// 	  if (!start) start = timestamp;
+// 	  const timeElapsed = timestamp - start;
+// 	  const percentage = Math.min(timeElapsed / duration, 1);
+
+// 	  // Calculate new scroll position using easing function
+// 	  window.scrollTo(0, startingY + diff * percentage);
+
+// 	  // Continue scrolling until duration is reached
+// 	  if (timeElapsed < duration) {
+// 	    window.requestAnimationFrame(step);
+// 	  }
+// 	}
+// );
+// }
