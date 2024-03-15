@@ -123,6 +123,10 @@ a{
 	height: 100%;
 }
 
+.work-items:hover{
+	background-color: #241835;
+}
+
 .contact-items{
 	display: flex;
 	padding:20px;
@@ -154,7 +158,6 @@ a{
 .gallery-items-back{
 
 }
-
 
 
  /* Smartphones (portrait and landscape) */

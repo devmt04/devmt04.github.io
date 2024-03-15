@@ -39,3 +39,31 @@ function focuslinenumber(index){
 function defocuslinenumber(index){
 	about_linedisplay_lines[index].style.color = "#7D7D7D";
 }
+
+
+
+document.getElementById("start").addEventListener('wheel', function(event){
+	// console.log(isListnerPause);
+	let delta = event.deltaY;
+	// console.log(delta);
+ 	if(delta>0){
+ 	// downscrolling
+ 		document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
+ 	}
+});
+
+
+var startY;
+document.getElementById("start").addEventListener('touchstart', function(event) {
+	startY = event.touches[0].clientY;
+});
+
+document.getElementById("start").addEventListener('touchmove', function(event) {
+	// console.log(isTouchListnerPause);
+	let delta = event.touches[0].clientY;
+	// console.log(delta);
+ 	if(delta<startY){
+ 		// downscrolling
+ 		document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
+ 	}
+});
