@@ -17,10 +17,16 @@
 
 }
 
+html{
+
+    scroll-behavior: smooth;
+
+}
+
 body{
 	margin: 0;
 	padding: 0;
-	background-color: var(--background);
+/*	background-color: var(--background);*/
 	color: white;
 }
 
@@ -55,8 +61,8 @@ a{
 
 #about, #work, #contact, #gallery{
 	padding: 80px;
+	background-color: var(--background);
 }
-
 
 #about-text{
 	margin-top: 50px;
@@ -265,5 +271,5 @@ a{
 
 @keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
 
-.tracking-in-contract-bck{animation:tracking-in-expand 1.3s cubic-bezier(.215,.61,.355,1.000) .8s both}
-@keyframes tracking-in-contract-bck{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+.focus-in-expand{animation:focus-in-expand .8s cubic-bezier(.25,.46,.45,.94) .4s both}
+@keyframes focus-in-expand{0%{letter-spacing:-.5em;filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}

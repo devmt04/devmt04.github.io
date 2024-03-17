@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 about_area = document.getElementById('about-text-code');
 about_area_lines = document.getElementsByClassName("about-text-code-line");
 numberOfLines = about_area_lines.length;
@@ -41,49 +43,51 @@ function defocuslinenumber(index){
 }
 
 
+isListnerPause = false;
+document.getElementById("start").addEventListener('wheel', function(event){
+	if(!isListnerPause){	
+		isListnerPause = true;
+		setTimeout(function (){
+			isListnerPause = false;
+		}, 500);	
 
-// const targetSection = document.getElementById("about");
-// const targetOffset = targetSection.offsetTop;
-// const duration = 500;
+		let delta = event.deltaY;
+	 	if(delta>0){
+	        scrollToSection(document.getElementById("about"), 500);
+	 	}
 
-// document.getElementById("start").addEventListener('wheel', function(event){
-// 	let delta = event.deltaY;
-//  	if(delta>0){
-//         scrollToSection(targetOffset, duration);
-//  	}
-// });
-
-
-// var startY;
-// document.getElementById("start").addEventListener('touchstart', function(event) {
-// 	startY = event.touches[0].clientY;
-// });
-// document.getElementById("start").addEventListener('touchmove', function(event) {
-// 	let delta = event.touches[0].clientY;
-//  	if(delta<startY){
-//         scrollToSection(targetOffset, duration);
-//  	}
-// });
+	}
+});
 
 
-// function scrollToSection(targetOffset, duration) {
-// 	const startingY = window.pageYOffset;
-// 	const diff = targetOffset - startingY;
-// 	let start;
+var startY;
+document.getElementById("start").addEventListener('touchstart', function(event) {
+	startY = event.touches[0].clientY;
+});
+document.getElementById("start").addEventListener('touchmove', function(event) {
+	let delta = event.touches[0].clientY;
+ 	if(delta<startY){
+        scrollToSection(document.getElementById("about"), 500);
+ 	}
+});
 
-// 	// Use requestAnimationFrame to create smooth animation
-// 	window.requestAnimationFrame(function step(timestamp) {
-// 	  if (!start) start = timestamp;
-// 	  const timeElapsed = timestamp - start;
-// 	  const percentage = Math.min(timeElapsed / duration, 1);
+});
 
-// 	  // Calculate new scroll position using easing function
-// 	  window.scrollTo(0, startingY + diff * percentage);
 
-// 	  // Continue scrolling until duration is reached
-// 	  if (timeElapsed < duration) {
-// 	    window.requestAnimationFrame(step);
-// 	  }
-// 	}
-// );
-// }
+function scrollToSection(section, duration){
+    const startingY = window.pageYOffset;
+	const diff = section.offsetTop - startingY;
+	let startTime;
+
+	window.requestAnimationFrame(function step(timestamp) {
+	  if (!startTime) startTime = timestamp;
+	  const timeElapsed = timestamp - startTime;
+	  const percentage = Math.min(timeElapsed / duration, 1);
+
+	  window.scrollTo(0, startingY + diff * percentage);
+
+	  if (timeElapsed < duration) {
+	    window.requestAnimationFrame(step);
+	  }
+	});
+}
