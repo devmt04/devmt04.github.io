@@ -21,7 +21,7 @@ function navbarStatus(){
 	// 	document.getElementById("navbar-work").style.color = "white";
 	// 	document.getElementById("navbar-contact").style.color = "#A867FF";	
 	// };
-	
+
 }
 
 function scrollToSection(section, duration){
@@ -99,7 +99,6 @@ document.getElementById("start").addEventListener('wheel', function(event){
 	 	if(delta>0){
 	        scrollToSection(document.getElementById("about"), 500);
 	 	}
-
 	}
 });
 	navbarStatus();
