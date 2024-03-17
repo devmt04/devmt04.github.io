@@ -21,6 +21,7 @@ function navbarStatus(){
 	// 	document.getElementById("navbar-work").style.color = "white";
 	// 	document.getElementById("navbar-contact").style.color = "#A867FF";	
 	// };
+	
 }
 
 function scrollToSection(section, duration){
