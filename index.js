@@ -1,4 +1,46 @@
-document.addEventListener("DOMContentLoaded", function() {
+function navbarStatus(){
+	if(window.pageYOffset >= document.getElementById("start").offsetTop && window.pageYOffset < document.getElementById("start").offsetTop + document.getElementById("start").offsetHeight){
+		document.getElementById("navbar-start").style.color = "#A867FF";
+		document.getElementById("navbar-about").style.color = "white";
+		document.getElementById("navbar-work").style.color = "white";
+		document.getElementById("navbar-contact").style.color = "white";	
+	}else if(window.pageYOffset >= document.getElementById("about").offsetTop && window.pageYOffset < document.getElementById("about").offsetTop + document.getElementById("about").offsetHeight){
+		document.getElementById("navbar-start").style.color = "white";
+		document.getElementById("navbar-about").style.color = "#A867FF";
+		document.getElementById("navbar-work").style.color = "white";
+		document.getElementById("navbar-contact").style.color = "white";	
+	}else if(window.pageYOffset >= document.getElementById("work").offsetTop && window.pageYOffset < document.getElementById("work").offsetTop + document.getElementById("work").offsetHeight ){
+		document.getElementById("navbar-start").style.color = "white";
+		document.getElementById("navbar-about").style.color = "white";
+		document.getElementById("navbar-work").style.color = "#A867FF";
+		document.getElementById("navbar-contact").style.color = "white";	
+	}
+	// }else if(window.pageYOffset <= window.scrollMaxY && window.pageYOffset >= document.getElementById('contact').offsetHeight){
+	// 	document.getElementById("navbar-start").style.color = "white";
+	// 	document.getElementById("navbar-about").style.color = "white";
+	// 	document.getElementById("navbar-work").style.color = "white";
+	// 	document.getElementById("navbar-contact").style.color = "#A867FF";	
+	// };
+}
+
+function scrollToSection(section, duration){
+    const startingY = window.pageYOffset;
+	const diff = section.offsetTop - startingY;
+	let startTime;
+
+	window.requestAnimationFrame(function step(timestamp) {
+	  if (!startTime) startTime = timestamp;
+	  const timeElapsed = timestamp - startTime;
+	  const percentage = Math.min(timeElapsed / duration, 1);
+
+	  window.scrollTo(0, startingY + diff * percentage);
+
+	  if (timeElapsed < duration) {
+	    window.requestAnimationFrame(step);
+	  }
+	});
+}
+
 
 about_area = document.getElementById('about-text-code');
 about_area_lines = document.getElementsByClassName("about-text-code-line");
@@ -43,6 +85,7 @@ function defocuslinenumber(index){
 }
 
 
+document.addEventListener("DOMContentLoaded", function() {
 isListnerPause = false;
 document.getElementById("start").addEventListener('wheel', function(event){
 	if(!isListnerPause){	
@@ -58,36 +101,6 @@ document.getElementById("start").addEventListener('wheel', function(event){
 
 	}
 });
-
-
-var startY;
-document.getElementById("start").addEventListener('touchstart', function(event) {
-	startY = event.touches[0].clientY;
+	navbarStatus();
+	window.addEventListener("scroll", navbarStatus);
 });
-document.getElementById("start").addEventListener('touchmove', function(event) {
-	let delta = event.touches[0].clientY;
- 	if(delta<startY){
-        scrollToSection(document.getElementById("about"), 500);
- 	}
-});
-
-});
-
-
-function scrollToSection(section, duration){
-    const startingY = window.pageYOffset;
-	const diff = section.offsetTop - startingY;
-	let startTime;
-
-	window.requestAnimationFrame(function step(timestamp) {
-	  if (!startTime) startTime = timestamp;
-	  const timeElapsed = timestamp - startTime;
-	  const percentage = Math.min(timeElapsed / duration, 1);
-
-	  window.scrollTo(0, startingY + diff * percentage);
-
-	  if (timeElapsed < duration) {
-	    window.requestAnimationFrame(step);
-	  }
-	});
-}

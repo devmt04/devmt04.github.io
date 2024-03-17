@@ -14,16 +14,21 @@
 		<div id="start-backdrop">
 			<div id="start-intro">
 
-				<div style="position: absolute;top: 30px; right: 40px; display: flex;gap:20px;font-weight: 600;font-size: 0.9em;user-select:none;">
-					<span onclick="scrollToSection(document.getElementById('about'), 300)">About/&gt</span>
-					<span onclick="scrollToSection(document.getElementById('work'), 300)">Work/&gt</span>
-					<span onclick="scrollToSection(document.getElementById('contact'), 300)">Contact/&gt</span>
+				<div style="position: fixed;top: 30px; right: 40px; display: flex;gap:20px;font-size: 0.9em;user-select:none;">
+					<span id="navbar-start" style="cursor:pointer;color:#A867FF;font-weight: 600;" onclick="scrollToSection(document.getElementById('start'), 300);navbarStatus();">Start/&gt</span>
+					<span id="navbar-about"  style="cursor:pointer;font-weight: 500;" onclick="scrollToSection(document.getElementById('about'), 300); navbarStatus();">About/&gt</span>
+					<span id="navbar-work"  style="cursor:pointer;font-weight: 500;" onclick="scrollToSection(document.getElementById('work'), 300);navbarStatus();">Work/&gt</span>
+					<span id="navbar-contact"  style="cursor:pointer;font-weight: 500;" onclick="scrollToSection(document.getElementById('contact'), 300);/*navbarStatus();*/">Contact/&gt</span>
 				</div>
 
 				<p class="tracking-in-expand" id="start-intro-p1" style='font-size: 3.5em;font-weight: 400;margin-bottom: 15px;text-align: center;'>Hii, I am <span style="color:#A867FF;font-weight:700;">Mohit</span></p>
 				<p class="focus-in-expand" id="start-intro-p2" style='font-size: 1.8em;font-weight: 300;text-align: center;'>&ltEngineer with mad skills</p>
 				<p class="focus-in-expand" id="start-intro-p3" style='font-size: 1.8em;font-weight: 300;text-align: center;'>fueled by curiosity/&gt</p>
 			</div>
+
+	<!-- 		<div onclick="scrollToSection(document.getElementById('about'), 300);" style="position:absolute;bottom: 30px;right:40px;">
+				<svg style="width:25px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#A867FF" d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z"/></svg>
+			</div> -->
 		</div>
 	</section>
 
