@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		  			elements[i].style.display = "block";
 				}
 			}
+			
 		}
 
 		const workItems = document.getElementsByClassName("work-items");
