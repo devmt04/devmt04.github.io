@@ -102,8 +102,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	});
 
+	const elements = document.getElementsByClassName("about-text-code-line");
+	const workItems = document.getElementsByClassName("work-items");
 	window.addEventListener("scroll", function (event) {
-		const elements = document.getElementsByClassName("about-text-code-line");
 		for(let i = 0; i<elements.length; i++){
 			if(elements[i].classList.contains("animate__animated") == false){
 				if (elements[i].getBoundingClientRect().top <= window.innerHeight && elements[i].getBoundingClientRect().bottom >= 0) {
@@ -114,7 +115,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		}
 
-		const workItems = document.getElementsByClassName("work-items");
 		for(let i = 0; i<workItems.length; i++){
 			if(workItems[i].classList.contains("animate__animated") == false){
 				if (workItems[i].getBoundingClientRect().top  <= window.innerHeight  && workItems[i].getBoundingClientRect().bottom >= 0) {
@@ -123,10 +123,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			}
 		}
+
+		navbarStatus();
 	});
 
 
 
 	navbarStatus();
-	window.addEventListener("scroll", navbarStatus);
+	// window.addEventListener("scroll", navbarStatus);
 });
