@@ -120,7 +120,9 @@ document.addEventListener("DOMContentLoaded", function() {
 				if (workItems[i].getBoundingClientRect().top  <= window.innerHeight  && workItems[i].getBoundingClientRect().bottom >= 0) {
 	  				workItems[i].className+=" animate__animated animate__flipInX";
 				}
-			}		}
+
+			}
+		}
 	});
 
 
