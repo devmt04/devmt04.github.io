@@ -121,6 +121,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			}		}
 	});
 
+	
+
 	navbarStatus();
 	window.addEventListener("scroll", navbarStatus);
 });
