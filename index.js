@@ -123,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			}
 		}
-
 		navbarStatus();
 	});
 
