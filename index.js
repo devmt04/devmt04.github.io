@@ -85,22 +85,42 @@ function defocuslinenumber(index){
 	about_linedisplay_lines[index].style.color = "#7D7D7D";
 }
 
-
+// animate__animated animate__fadeInRight
 document.addEventListener("DOMContentLoaded", function() {
-isListnerPause = false;
-document.getElementById("start").addEventListener('wheel', function(event){
-	if(!isListnerPause){	
-		isListnerPause = true;
-		setTimeout(function (){
-			isListnerPause = false;
-		}, 500);	
+	isListnerPause = false;
+	document.getElementById("start").addEventListener('wheel', function(event){
+		if(!isListnerPause){	
+			isListnerPause = true;
+			setTimeout(function (){
+				isListnerPause = false;
+			}, 500);	
 
-		let delta = event.deltaY;
-	 	if(delta>0){
-	        scrollToSection(document.getElementById("about"), 500);
-	 	}
-	}
-});
+			let delta = event.deltaY;
+		 	if(delta>0){
+		        scrollToSection(document.getElementById("about"), 500);
+		 	}
+		}
+	});
+
+	window.addEventListener("scroll", function (event) {
+		const elements = document.getElementsByClassName("about-text-code-line");
+		for(let i = 0; i<elements.length; i++){
+			if(elements[i].classList.contains("animate__animated") == false){
+				if (elements[i].getBoundingClientRect().top <= window.innerHeight && elements[i].getBoundingClientRect().bottom >= 0) {
+		  			elements[i].className+=" animate__animated animate__fadeInRight";
+				}
+			}
+		}
+
+		const workItems = document.getElementsByClassName("work-items");
+		for(let i = 0; i<workItems.length; i++){
+			if(workItems[i].classList.contains("animate__animated") == false){
+				if (workItems[i].getBoundingClientRect().top  <= window.innerHeight  && workItems[i].getBoundingClientRect().bottom >= 0) {
+	  				workItems[i].className+=" animate__animated animate__flipInX";
+				}
+			}		}
+	});
+
 	navbarStatus();
 	window.addEventListener("scroll", navbarStatus);
 });
