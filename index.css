@@ -39,7 +39,7 @@ a{
 }
 
 .about-text-code-line{
-	display: none;
+	
 }
 
 #start{
@@ -96,6 +96,8 @@ a{
 }
 
 .about-text-code-line{
+	display: block;
+	visibility: hidden;
 	font-family: "Lekton", sans-serif;
 	padding: 1px;
 	padding-left: 10px;
