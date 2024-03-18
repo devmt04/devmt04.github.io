@@ -38,6 +38,10 @@ a{
 	text-decoration: none;
 }
 
+.about-text-code-line{
+	display: none;
+}
+
 #start{
 	height: 100vh;
 	width:100vw;
@@ -92,7 +96,6 @@ a{
 }
 
 .about-text-code-line{
-	display: block;
 	font-family: "Lekton", sans-serif;
 	padding: 1px;
 	padding-left: 10px;

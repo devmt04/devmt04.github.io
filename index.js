@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			if(elements[i].classList.contains("animate__animated") == false){
 				if (elements[i].getBoundingClientRect().top <= window.innerHeight && elements[i].getBoundingClientRect().bottom >= 0) {
 		  			elements[i].className+=" animate__animated animate__fadeInRight";
+		  			elements[i].style.display = "block";
 				}
 			}
 		}
@@ -121,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			}		}
 	});
 
-	
+
 
 	navbarStatus();
 	window.addEventListener("scroll", navbarStatus);
