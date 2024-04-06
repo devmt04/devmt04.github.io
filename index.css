@@ -134,6 +134,7 @@ a{
 
 .work-items:hover{
 	background-color: #241835;
+	box-shadow: 8px 5px 8px 8px #1c1920;
 }
 
 .contact-items{

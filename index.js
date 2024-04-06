@@ -131,3 +131,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	navbarStatus();
 	// window.addEventListener("scroll", navbarStatus);
 });
+
+w = '400';
+setInterval(function(event) {
+	if(w == '400'){
+		w = '900';
+		document.getElementById('skills-cursor').style.visibility = 'hidden';
+		document.getElementById('skills-cursor').style.fontWeight = '900';
+	}else{
+		w = '400';
+		document.getElementById('skills-cursor').style.visibility = 'visible';
+	}
+},900);
+
