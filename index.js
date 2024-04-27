@@ -15,13 +15,13 @@ function navbarStatus(){
 		document.getElementById("navbar-work").style.color = "#A867FF";
 		document.getElementById("navbar-contact").style.color = "white";	
 	}
-	// }else if(window.pageYOffset <= window.scrollMaxY && window.pageYOffset >= document.getElementById('contact').offsetHeight){
-	// 	document.getElementById("navbar-start").style.color = "white";
-	// 	document.getElementById("navbar-about").style.color = "white";
-	// 	document.getElementById("navbar-work").style.color = "white";
-	// 	document.getElementById("navbar-contact").style.color = "#A867FF";	
-	// };
-
+	 if(window.pageYOffset == window.scrollMaxY){
+		console.log("asd");
+		document.getElementById("navbar-start").style.color = "white";
+		document.getElementById("navbar-about").style.color = "white";
+		document.getElementById("navbar-work").style.color = "white";
+		document.getElementById("navbar-contact").style.color = "#A867FF";	
+	};
 }
 
 function scrollToSection(section, duration){
@@ -125,8 +125,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 		navbarStatus();
 	});
-
-
 
 	navbarStatus();
 	// window.addEventListener("scroll", navbarStatus);

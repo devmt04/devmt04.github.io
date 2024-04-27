@@ -16,11 +16,12 @@
 	--code-comment : #616062;
 
 }
+html, body {
+  overflow-x: hidden;
+}
 
 html{
-
     scroll-behavior: smooth;
-
 }
 
 body{
@@ -128,13 +129,23 @@ a{
 }
 
 .work-items img{
-	width: 100%;
+	width: 250px;
 	height: 100%;
+	transition: width 0.3s ease;
 }
 
 .work-items:hover{
 	background-color: #241835;
 	box-shadow: 8px 5px 8px 8px #1c1920;
+}
+
+.project-logo-hover{
+/*	position: absolute;*/
+}
+
+.project-logo-hover img{
+/*	position: relative;*/
+	width:300px;
 }
 
 .contact-items{
@@ -250,6 +261,9 @@ a{
 		flex-direction: column;
 		align-items: flex-start;
 		margin-top:50px!important;
+	}
+	.work-items img{
+		width: 210px;
 	}
 }
 
