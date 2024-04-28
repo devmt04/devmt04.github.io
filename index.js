@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		for(let i = 0; i<workItems.length; i++){
 			if(workItems[i].classList.contains("animate__animated") == false){
-				if (workItems[i].getBoundingClientRect().top  <= window.innerHeight  && workItems[i].getBoundingClientRect().bottom >= 0) {
+				if (workItems[i].getBoundingClientRect().top  <= window.innerHeight && workItems[i].getBoundingClientRect().bottom >= 0) {
 	  				workItems[i].className+=" animate__animated animate__flipInX";
 				}
 
