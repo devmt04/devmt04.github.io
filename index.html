@@ -176,7 +176,32 @@
 		</div>
 
 		<div style="display: flex;flex-wrap: wrap;margin-top:70px;gap:50px;">
-			 
+			 <div onmouseover="
+				document.getElementById('todowidget-info').style.display='flex';
+				document.getElementById('todowidget-logo').classList.add('project-logo-hover');
+				" onmouseleave="
+				document.getElementById('todowidget-info').style.display='none';
+				document.getElementById('todowidget-logo').classList.remove('project-logo-hover');
+				 " style="position:relative;">
+					<div class="work-items">
+						<div id='todowidget-logo'>
+							<img src="static/work/todowidget.svg">
+						</div>
+						<div>
+							<p style="text-align: center;">TODOWidget - A Pure<br>XLib/X11-Based Task Management Tool</p>
+						</div>
+					</div>
+
+					<div id="todowidget-info" style="background-image: linear-gradient(#ac8fd026, rgba(11, 3, 21, 1));padding:20px;position: absolute;bottom:0;top: 0;display: none;flex-direction: column;justify-content: flex-end;align-items: center;text-align: center;">
+						<p style='font-family: "Lexend", sans-serif;margin-bottom:15px;'>TODOWidget</p>
+						<span style='font-family: "Lekton", sans-serif;font-size:0.9em;font-weight: 500;'>
+							TODOWidget is a simple and lightweight desktop widget for Linux, created using pure X11's low-level API XLib with no external dependencies in C. This widget allows you to keep track of your TODOs right on your desktop.<br><br>
+							<a style="text-decoration: none;color: white;font-weight: 600;" href="https://github.com/devmt04/TODOWidget/" target="_blank">View it on Github</a>
+						</span>
+					</div> 
+			</div>
+
+
 			<div onmouseover="
 				document.getElementById('vedika-info').style.display='flex';
 				document.getElementById('vedika-logo').classList.add('project-logo-hover');
@@ -200,7 +225,7 @@
 							<a style="text-decoration: none;color: white;font-weight: 600;" href="https://github.com/devmt04/Vedika/" target="_blank">View it on Github</a>
 						</span>
 					</div> 
-				</div>
+			</div>
 
 
 			<div onmouseover="
