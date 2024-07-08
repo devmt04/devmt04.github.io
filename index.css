@@ -263,9 +263,14 @@ a{
 		align-items: flex-start;
 		margin-top:50px!important;
 	}
-	.work-items img{
-		width: 210px;
+	.work-container{
+		width: 100%;
+		margin-right: 20px;
 	}
+	.work-items img{
+		width: 100%;
+	}
+
 }
 
 /* Tablets (portrait and landscape) */
