@@ -120,21 +120,21 @@
 					         <span class="about-text-code-line line-indent-2" onmouseenter="focuslinenumber(15);" onmouseleave="defocuslinenumber(15);">
 					         	<span style="color:var(--code-keyword);">return</span> [
 					         	<span style="color:var(--code-string);font-weight: 700;">‘HTML/CSS/JS’</span>, 
-					         	<span style="color:var(--code-string);font-weight: 700;">‘Python’</span>
-					         	, 
+					         	<span style="color:var(--code-string);font-weight: 700;">‘Python’</span>, 
 					         	<span style="color:var(--code-string);font-weight: 700;">‘C/C++’</span>, 
+					         	 <span style="color:var(--code-string);font-weight: 700;">‘Java </span>, 
 					         	<span style="color:var(--code-string);font-weight: 700;">‘x86 Assembly’</span>, 
 					         	<span style="color:var(--code-string);font-weight: 700;">‘Linux’</span>, 
-
 					        <span style="color:var(--code-string);font-weight: 700;">‘Embedded Systems - Ardiuno’</span>, 
 					        <span style="color:var(--code-string);font-weight: 700;">‘Django’</span>,
 					         <span style="color:var(--code-string);font-weight: 700;">‘Angular16’</span>, 
 					         <span style="color:var(--code-string);font-weight: 700;">‘SQL’</span>, 
 					         <span style="color:var(--code-string);font-weight: 700;">‘MongoDB’</span>,                   
-					         <span style="color:var(--code-string);font-weight: 700;">‘Git’</span>,
-					          <span style="color:var(--code-string);font-weight: 700;">‘Dart - Flutter’</span>, 
-					          <span style="color:var(--code-string);font-weight: 700;">‘Java - Android’</span>, 
+					         <span style="color:var(--code-string);font-weight: 700;">‘Qt(C++)’</span>,
+					          <span style="color:var(--code-string);font-weight: 700;">‘X11/XLib’</span>, 
 					          <span style="color:var(--code-string);font-weight: 700;">’Machine Learning’</span>
+					          <span style="color:var(--code-string);font-weight: 700;">‘Git’</span>,
+
 					      , <span id='skills-cursor' style="font-weight: 900;">|</span> ]</span>
 					    <span class="about-text-code-line line-indent-1" onmouseenter="focuslinenumber(16);" onmouseleave="defocuslinenumber(16);">}</span>
 					    		<span class="about-text-code-line" onmouseenter="focuslinenumber(17);" onmouseleave="defocuslinenumber(17);">&nbsp</span>
@@ -201,33 +201,6 @@
 					</div> 
 			</div>
 
-
-			<div class="work-container" onmouseover="
-				document.getElementById('vedika-info').style.display='flex';
-				document.getElementById('vedika-logo').classList.add('project-logo-hover');
-				" onmouseleave="
-				document.getElementById('vedika-info').style.display='none';
-				document.getElementById('vedika-logo').classList.remove('project-logo-hover');
-				 " style="position:relative;">
-					<div class="work-items">
-						<div id='vedika-logo'>
-							<img src="static/work/vedika.svg">
-						</div>
-						<div>
-							<p>Vedika - A tiny Compiler</p>
-						</div>
-					</div>
-
-					<div id="vedika-info" style="background-image: linear-gradient(#ac8fd026, rgba(11, 3, 21, 1));padding:20px;position: absolute;bottom:0;top: 0;display: none;flex-direction: column;justify-content: flex-end;align-items: center;text-align: center;">
-						<p style='font-family: "Lexend", sans-serif;margin-bottom:15px;'>Vedika - Bridging Code and Consciousness</p>
-						<span style='font-family: "Lekton", sans-serif;font-size:0.9em;font-weight: 500;'>
-							Vedika is a tiny-compiler as a hobby-project, which is not completetly build, but all basic units of a compiler are succesfully implimented.<br><br>
-							<a style="text-decoration: none;color: white;font-weight: 600;" href="https://github.com/devmt04/Vedika/" target="_blank">View it on Github</a>
-						</span>
-					</div> 
-			</div>
-
-
 			<div class="work-container" onmouseover="
 				document.getElementById('kernelBareBones-info-1').style.display='flex';
 				document.getElementById('kernelBareBones-logo-1').classList.add('project-logo-hover');
@@ -252,7 +225,61 @@
 						</span>
 					</div>
 				</div>
+
+			<div class="work-container" onmouseover="
+				document.getElementById('vedika-info').style.display='flex';
+				document.getElementById('vedika-logo').classList.add('project-logo-hover');
+				" onmouseleave="
+				document.getElementById('vedika-info').style.display='none';
+				document.getElementById('vedika-logo').classList.remove('project-logo-hover');
+				 " style="position:relative;">
+					<div class="work-items">
+						<div id='vedika-logo'>
+							<img src="static/work/vedika_browser.png">
+						</div>
+						<div>
+							<p>Vedika Web Browser</p>
+						</div>
+					</div>
+
+					<div id="vedika-info" style="background-image: linear-gradient(#ac8fd026, rgba(11, 3, 21, 1));padding:20px;position: absolute;bottom:0;top: 0;display: none;flex-direction: column;justify-content: flex-end;align-items: center;text-align: center;">
+						<p style='font-family: "Lexend", sans-serif;margin-bottom:15px;'>Vedika Web Browser</p>
+						<span style='font-family: "Lekton", sans-serif;font-size:0.9em;font-weight: 500;'>
+							A distraction-free web browser for researchers, built with Qt, that supports single, split, and grid views for efficient multitasking.<br><br>
+							<a style="text-decoration: none;color: white;font-weight: 600;" href="https://github.com/devmt04/VedikaBrowser/" target="_blank">View it on Github</a>
+						</span>
+					</div> 
+			</div>
+
+			<div class="work-container" onmouseover="
+				document.getElementById('hrnetmtl-info').style.display='flex';
+				document.getElementById('hrnetmtl-logo').classList.add('project-logo-hover');
+				" onmouseleave="
+				document.getElementById('hrnetmtl-info').style.display='none';
+				document.getElementById('hrnetmtl-logo').classList.remove('project-logo-hover');
+				 " style="position:relative;">
+					<div class="work-items">
+						<div id='hrnetmtl-logo'>
+							<img src="static/work/hrnet.png">
+						</div>
+						<div>
+							<p>HRNET-MTL</p>
+						</div>
+					</div>
+
+					<div id="hrnetmtl-info" style="background-image: linear-gradient(#ac8fd026, rgba(11, 3, 21, 1));padding:20px;position: absolute;bottom:0;top: 0;display: none;flex-direction: column;justify-content: flex-end;align-items: center;text-align: center;">
+						<p style='font-family: "Lexend", sans-serif;margin-bottom:15px;'>HRNET-MTL Machine Learning Model</p>
+						<span style='font-family: "Lekton", sans-serif;font-size:0.9em;font-weight: 500;'>
+							A Multi-task Learning model for Age Prediction, Body Segmentation and Pose Analysis on Human Images<br><br>
+							<a style="text-decoration: none;color: white;font-weight: 600;" href="https://github.com/devmt04//HRNET-MTL/" target="_blank">View it on Github</a>
+						</span>
+					</div> 
+			</div>
+
 		</div>
+
+
+
 
 
 	</section>
